@@ -9,8 +9,8 @@
   --accent_font-weight: 400;
 
   --main_font-family: "Inter-Variable", sans-serif;
-  --main_label_font-var-settings: "wght" 700, "slnt" 0;
-  --main_text_font-var-settings: "wght" 400, "slnt" 0;
+  --main_label_font-var-settings: 700;
+  --main_text_font-var-settings: 400;
   --main_font-size: 18px;
   --main_line-height: 1.3em;
 

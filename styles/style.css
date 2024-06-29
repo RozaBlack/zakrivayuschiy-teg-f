@@ -28,7 +28,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   max-inline-size: 700px;
-  font-variation-settings: var(--main_text_font-var-settings);
+  font-variation-settings: "wght" var(--main_text_font-var-settings);
 }
 
 button {
@@ -148,7 +148,7 @@ button {
 .card_title {
   padding: 5px 10px;
   font-size: var(--main_font-size);
-  font-variation-settings: var(--main_label_font-var-settings);
+  font-variation-settings: "wght" var(--main_label_font-var-settings);
 }
 
 .card_content {
