@@ -309,9 +309,7 @@ button {
 .dialog_text {
   color: var(--color);
   font-family: var(--accent_font-family);
-  font-weight: 400;
   font-weight: var(--normal_font-weight);
-  font-size: 14px;
   font-size: var(--accent_font-size);
   font-style: normal;
   line-height: 21px;
