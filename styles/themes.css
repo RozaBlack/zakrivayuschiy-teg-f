@@ -6,49 +6,72 @@
 */
 
 @media (prefers-color-scheme: dark) {
-  
   :root {
-    --main_label_font-var-settings: 'wght' 785, 'slnt' 0;
-    --main_text_font-var-settings: 'wght' 465, 'slnt' 0;
-  
-    --background-color: #000;
-    --color: #00CC14;
-    --button_text_color: #00CC14;
-    --heart_contour_color: #00CC14;
+    --main_label_font-var-settings: "wght" 785, "slnt" 0;
+    --main_text_font-var-settings: "wght" 465, "slnt" 0;
 
-    --background-image: 
-    repeating-linear-gradient(transparent 2px, #000 2px 4px, transparent 4px 6px),
-    repeating-linear-gradient(90deg, #000 2px, transparent 2px 4px, #000 4px 6px),
-    linear-gradient(#007f0c, #004306);
+    --background-color: #000;
+    --color: #00cc14;
+    --button_text_color: #00cc14;
+    --heart_contour_color: #00cc14;
+
+    --background-image: repeating-linear-gradient(
+        transparent 2px,
+        #000 2px 4px,
+        transparent 4px 6px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        #000 2px,
+        transparent 2px 4px,
+        #000 4px 6px
+      ),
+      linear-gradient(#007f0c, #004306);
   }
 }
 
 .theme-light {
-  --main_label_font-var-settings: 'wght' 700, 'slnt' 0;
-  --main_text_font-var-settings: 'wght' 400, 'slnt' 0;
+  --main_label_font-var-settings: "wght" 700, "slnt" 0;
+  --main_text_font-var-settings: "wght" 400, "slnt" 0;
 
   --background-color: #fff;
   --color: #000;
-  --button_text_color: #FFFFFF;
+  --button_text_color: #ffffff;
   --heart_contour_color: #000000;
 
-  --background-image: 
-    repeating-linear-gradient(transparent 2px, #d3d3d3 2px 4px, transparent 4px 6px),
-    repeating-linear-gradient(90deg, #d3d3d3 2px, transparent 2px 4px, #d3d3d3 4px 6px),
+  --background-image: repeating-linear-gradient(
+      transparent 2px,
+      #d3d3d3 2px 4px,
+      transparent 4px 6px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #d3d3d3 2px,
+      transparent 2px 4px,
+      #d3d3d3 4px 6px
+    ),
     linear-gradient(#e7e7e7 0.01%, #1a1a1a);
 }
 
 .theme-dark {
-  --main_label_font-var-settings: 'wght' 785, 'slnt' 0;
-  --main_text_font-var-settings: 'wght' 465, 'slnt' 0;
+  --main_label_font-var-settings: "wght" 785, "slnt" 0;
+  --main_text_font-var-settings: "wght" 465, "slnt" 0;
 
   --background-color: #000;
-  --color: #00CC14;
-  --button_text_color: #00CC14;
-  --heart_contour_color: #00CC14;
+  --color: #00cc14;
+  --button_text_color: #00cc14;
+  --heart_contour_color: #00cc14;
 
-  --background-image: 
-    repeating-linear-gradient(transparent 2px, #000 2px 4px, transparent 4px 6px),
-    repeating-linear-gradient(90deg, #000 2px, transparent 2px 4px, #000 4px 6px),
+  --background-image: repeating-linear-gradient(
+      transparent 2px,
+      #000 2px 4px,
+      transparent 4px 6px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #000 2px,
+      transparent 2px 4px,
+      #000 4px 6px
+    ),
     linear-gradient(#007f0c, #004306);
 }

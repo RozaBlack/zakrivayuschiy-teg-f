@@ -20,7 +20,7 @@
   100% {
     translate: 4px;
   }
-} 
+}
 
 @keyframes heart_grow {
   0% {
@@ -29,7 +29,7 @@
   100% {
     transform: scale(1.5);
   }
-} 
+}
 
 @keyframes sparks_appears {
   0% {
@@ -38,8 +38,7 @@
   100% {
     opacity: 1;
   }
-} 
-
+}
 
 .like-icon,
 .heart {
@@ -75,7 +74,6 @@
   transition: fill 0.3s linear;
 }
 
-
 .like-icon:active .main-body {
   fill: var(--heart_sparks_color);
   transition: fill 0.3s linear 0.05s;
@@ -85,7 +83,6 @@
   fill: var(--heart_sparks_color);
   transition: fill 0.3s linear;
 }
-
 
 .like-icon.is-liked .core {
   fill: var(--heart_sparks_color);
