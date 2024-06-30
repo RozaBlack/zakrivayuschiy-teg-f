@@ -1,11 +1,11 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --accent_font-family: "PressStart2P-Regular", sans-serif;
+  --accent_font-family: "PressStart2P", fantasy;
   --logo_font-size: clamp(3.0625rem, 2.4847rem + 2.4653vw, 4.0625rem);
   --page_title_font-size: clamp(0.875rem, 0.55rem + 1.3867vw, 1.4375rem);
   --accent_font-size: 14px;
   --font-style: normal;
-  --accent_line-height: 1em;
+  --accent_line-height: 101%;
   --accent_font-weight: 400;
 
   --main_font-family: "Inter-Variable", sans-serif;
@@ -32,4 +32,16 @@
       #d3d3d3 4px 6px
     ),
     linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+
+  /* фильтры картинок */
+  --filter_sepia: sepia(70%);
+  --filter_sepia_invert: sepia(40%) invert(1);
+  --filter_hue-rotate: hue-rotate(197deg);
+  --filter_satur_bright_contrast: saturate(141%) brightness(75%) contrast(106%);
+  --filter_blur: blur(1px);
+  --filter_grayscale: grayscale(68%);
+  --filter_invert_saturate: invert(0.2) saturate(72%);
+  --filter_contrast_opacity: contrast(81%) opacity(0.6);
+  --image_shadow_color: rgba(0, 0, 0, 54.61);
+
 }

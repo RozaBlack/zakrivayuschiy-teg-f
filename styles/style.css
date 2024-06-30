@@ -137,7 +137,7 @@ button {
 .main {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 52px;
 }
 
 .card {
@@ -155,7 +155,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 23.1px;
 }
 
 .card_image {
@@ -171,20 +171,22 @@ button {
 
 .image_text {
   position: absolute;
-  top: 25px;
+  z-index: 1;
+  top: 22px;
   right: clamp(13px, calc(3.7383vw - 1.0187px), 25px);
+  opacity: 0.5;
   text-shadow: 0 0 1px var(--background-color);
   mix-blend-mode: hard-light;
 }
 
 @supports (
-  (-webkit-text-stroke: 0.1px var(--background-color)) or
-    (text-stroke: 0.1px var(--background-color))
+  (-webkit-text-stroke: 1px var(--background-color)) or
+    (text-stroke: 1px var(--background-color))
 ) {
   .image_text {
     text-shadow: none;
-    -webkit-text-stroke: 0.1px var(--background-color);
-    text-stroke: 0.1px var(--background-color);
+    -webkit-text-stroke: 1px var(--background-color);
+    text-stroke: 1px var(--background-color);
   }
 }
 
@@ -192,7 +194,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 27px;
-  padding: 0 25px 0 27px;
+  padding: 0 26px 0 26px;
   line-height: 21px;
 }
 
@@ -200,7 +202,7 @@ button {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 12px;
+  gap: 7px;
   padding: 0 25px;
 }
 
@@ -210,13 +212,12 @@ button {
   border: 2px solid transparent;
   background: var(--background-color);
   transition: border 0.3s ease;
-  cursor: pointer;
 }
 
 .like-icon {
   box-sizing: border-box;
   height: min-content;
-  block-size: 39px;
+  block-size: 34px;
   inline-size: 37px;
 }
 
@@ -229,50 +230,6 @@ button {
   outline: none;
 }
 
-.card__like-button {
-  position: relative;
-  display: block;
-  border: 2px solid var(--color);
-  padding: 11px 35px;
-  transition: box-shadow 0.3s ease;
-}
-
-.button_text {
-  position: relative;
-  z-index: 1;
-  display: block;
-  padding: 0;
-  color: var(--button_text_color);
-  line-height: 90%;
-  transition: mix-blend-mode 0.5s ease-in-out;
-  mix-blend-mode: difference;
-}
-
-/* подвал */
-
-.save_button {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  margin: 52px auto 102px;
-  padding: 15px;
-  background-color: var(--background-color);
-  transition: box-shadow 0.3s ease;
-  inline-size: clamp(306px, calc(9.0343vw + 272.1215px), 335px);
-}
-
-.floppy {
-  display: flex;
-  width: 28px;
-  height: 28px;
-  margin: auto;
-  color: var(--button_text_color);
-  mix-blend-mode: difference;
-}
 
 /* диалоговое окно */
 
@@ -291,7 +248,8 @@ button {
   border: 2px solid var(--color);
   padding: 0 clamp(30px, calc(51.6822px - 3.1152vw), 40px);
   background-color: var(--background-color);
-  block-size: 191px;
+  color: var(--color);
+  min-height: 191px; 
 }
 
 .dialog_info {
@@ -307,35 +265,94 @@ button {
 }
 
 .dialog_text {
-  color: var(--color);
-  font-family: var(--accent_font-family);
-  font-weight: var(--normal_font-weight);
-  font-size: var(--accent_font-size);
-  font-style: normal;
   line-height: 21px;
 }
 
-.close_dialog,
-.dialog_close-button {
+.close_dialog {
   display: block;
   width: 100%;
 }
 
-.dialog_close-button {
+/* оформление кнопок с текстом */
+
+.main_text_botton {
+  position: relative;
+  display: block;
   border: 2px solid var(--color);
+  transition: box-shadow 0.3s ease;
+  background-color: var(--background-color);
+}
+
+/* кнопка like */
+
+.card__like-button {
+  min-inline-size: 130px;
+  min-block-size: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* кнопка открывающая модальное окно */
+
+.save_button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto 102px;
+  padding: 15px 18px;
+  inline-size: clamp(306px, calc(9.0343vw + 272.1215px), 335px);
+}
+
+.floppy {
+  display: flex;
+  width: 28px;
+  height: 28px;
+  color: var(--button_text_color);
+  transition: mix-blend-mode 0.5s ease-in-out;
+  mix-blend-mode: difference;
+}
+
+@media (width > 615px) {
+  .save_button {
+    flex-wrap: nowrap;
+  }
+
+  .floppy {
+    width: 21px;
+    height: 21px;
+  }
+}
+
+/* кнопка ok модального окна */
+
+.dialog_close-button {
   padding: 12.5px 0;
+  width: 100%;
+}
+
+/* оформление текста в кнопках */
+.button__text {
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding: 0;
+  color: var(--button_text_color);
+  line-height: 90%;
+  transition: mix-blend-mode 0.5s ease-in-out;
+  mix-blend-mode: difference;
 }
 
 /* анимация кнопок */
 
-.card__like-button:focus,
-.save_button:focus {
+.main_text_botton:focus {
   box-shadow: 2px 2px 0 var(--color);
   outline: none;
 }
 
-.save_button::before,
-.card__like-button::before {
+.main_text_botton::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -349,8 +366,7 @@ button {
   transform-origin: left;
 }
 
-.card__like-button:hover::before,
-.save_button:hover::before {
+.main_text_botton:hover::before {
   outline: none;
   transform: scaleX(1);
 }
@@ -363,34 +379,49 @@ button {
 
 /* фильтры к картинкам */
 
-.sprint_0 {
-  filter: sepia(70%) opacity(0.4);
+.sepia {
+  filter: var(--filter_sepia);
 }
 
-.sprint1_0 {
-  filter: sepia(40%) invert(48.3) opacity(0.4);
+.shadow {
+  position: relative;
 }
 
-.sprint1_1 {
-  filter: hue-rotate(132deg) opacity(0.4);
+.shadow::before{
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 186px var(--image_shadow_color);
 }
 
-.sprint2_0 {
-  filter: saturate(113%) brightness(87%) contrast(184%) opacity(0.4);
+.sepia_invert {
+  filter: var(--filter_sepia_invert);
 }
 
-.sprint2_1 {
-  filter: blur(2px) opacity(0.4);
+.hue-rotate {
+  filter: var(--filter_hue-rotate);
 }
 
-.sprint3_0 {
-  filter: grayscale(100%) opacity(0.4);
+.satur_bright_contrast {
+  filter: var(--filter_satur_bright_contrast);
 }
 
-.sprint3_1 {
-  filter: invert(0.8) saturate(144%) opacity(0.4);
+.blur {
+  filter: var(--filter_blur);
 }
 
-.sprint4_0 {
-  filter: contrast(153%) opacity(0.4);
+.grayscale {
+  filter: var(--filter_grayscale);
+}
+
+.invert_saturate {
+  filter: var(--filter_invert_saturate);
+}
+
+.contrast_opacity {
+  filter: var(--filter_contrast_opacity);
 }
