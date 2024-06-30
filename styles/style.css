@@ -244,9 +244,8 @@ button {
   box-sizing: border-box;
   width: clamp(341px, calc(3.7383vw + 330.9813px), 357px);
   min-width: 341px;
-  min-height: 191px;
   border: 2px solid var(--color);
-  padding: 0 clamp(30px, calc(51.6822px - 3.1152vw), 40px);
+  padding: 30px clamp(30px, calc(51.6822px - 3.1152vw), 40px);
   color: var(--color);
   background-color: var(--background-color);
 }
