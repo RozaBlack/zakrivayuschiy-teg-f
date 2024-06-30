@@ -43,5 +43,4 @@
   --filter_invert_saturate: invert(0.2) saturate(72%);
   --filter_contrast_opacity: contrast(81%) opacity(0.6);
   --image_shadow_color: rgba(0, 0, 0, 54.61);
-
 }
